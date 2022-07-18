@@ -46,6 +46,23 @@ public class MathEquation {
         sumOfResults += result;
     }
 
+    public void execute(double leftVal, double rightVal){
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        execute();
+
+    }
+
+    public void execute(int leftVal, int rightVal){
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+        execute();
+
+        result = (int)result;
+    }
+
+
     public static double getAverageResult() {
         return sumOfResults / numberofCalculations;
     }
@@ -55,6 +72,11 @@ public class MathEquation {
     public void setLeftVal(double leftVal) { this.leftVal = leftVal; }
     public double getRightVal() { return rightVal; }
     public void setRightVal(double rightVal) { this.rightVal = rightVal;}
+    public char getOpCode(){ return opCode;}
+    public void setOpCode(char opCode) { this.opCode = opCode;}
+    public double getResult() { return result;}
+
+
 
 
 }
